@@ -33,8 +33,7 @@ class CartScreen extends StatelessWidget {
                     label: Text(
                       '\$${cart.totalAmount.toStringAsFixed(2)}',
                       style: TextStyle(
-                        color:
-                            Theme.of(context).primaryTextTheme.subtitle1!.color,
+                        color: Colors.deepPurple,
                       ),
                     ),
                     backgroundColor: Theme.of(context).primaryColor,
