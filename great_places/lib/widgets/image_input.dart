@@ -15,7 +15,7 @@ class ImageInput extends StatefulWidget {
 }
 
 class _ImageInputState extends State<ImageInput> {
-  late File _storedImage;
+  File _storedImage = File('');
 
   Future<void> _takePicture() async {
     final _picker = ImagePicker();
@@ -45,7 +45,7 @@ class _ImageInputState extends State<ImageInput> {
           decoration: BoxDecoration(
             border: Border.all(width: 1, color: Colors.grey),
           ),
-          child: _storedImage != null
+          child: _storedImage.path != ''
               ? Image.file(
                   _storedImage,
                   fit: BoxFit.cover,
